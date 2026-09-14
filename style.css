@@ -16,6 +16,12 @@
     --black-alpha-100: rgba(0,0,0,0.05);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Body & main settings(?)*/
 body {
     font-family: "B612", sans-serif;
     font-weight: 400;
@@ -35,4 +41,44 @@ body.dark-mode {
     --black-alpha-100: rgba(255,255,255,0.05);
     --black-900: #fff;
     --black-400: #bbb;
+}
+main {
+    padding: 40px 80px;
+    display: felx;
+    justify-content: center;
+}
+
+/*Intro*/
+.article > header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    gap: 16px;
+}
+header.page-header * {
+    align-items: center;
+}
+.profile-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 10px;
+    background-color: var(--black-400);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: visible;
+}
+
+.profile-avatar {
+    background-image: url("/assets/pfp.jpg");
+    background-position: 0% 15%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
 }
