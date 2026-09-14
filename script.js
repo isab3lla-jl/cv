@@ -1,3 +1,11 @@
+//Preloader
+window.addEventListener("load", function() {
+    const preloader = document.querySelector(".preloader");
+    preloader.style.transition = "opacity 0.5s ease";
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.style.display = "none", 500);
+});
+
 // Theme Toggle
 function toggleTheme() {
     if (localStorage.getItem("theme") !== null) {

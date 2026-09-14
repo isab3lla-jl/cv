@@ -74,7 +74,7 @@ section h2.section-title {
     text-transform: capitalize;
     transition: all 0.5s ease;
     box-shadow: var(--shadow-black-100);
-    font-weight: 500;
+    font-weight: 400;
 }
 .btn:focus{
     box-shadow: var(--shadow-black-100);
@@ -94,7 +94,7 @@ section h2.section-title {
     text-transform: capitalize;
     transition: all 0.5s ease;
     box-shadow: var(--shadow-black-100);
-    font-weight: 500;
+    font-weight: 700;
 }
 .btn-theme:focus{
     box-shadow: var(--shadow-black-100);
@@ -105,7 +105,7 @@ section h2.section-title {
 }
 
 /*Preloader*/
-/*@keyframes zoomInOut_01{
+@keyframes zoomInOut_01{
     0%{
         transform: scale(0);
     }
@@ -135,7 +135,7 @@ section h2.section-title {
     background-color: var(--dark-to-main-color);
     border-radius: 50%;
     animation: zoomInOut_01 1s ease infinite;
-}*/
+}
 
 /*Navbar*/
 .navbar {
