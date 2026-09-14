@@ -1,0 +1,38 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*Vars*/
+:root {
+    --main-color: #b00b69;
+    --bg-dark: #2f2f3d;
+    --main-to-dark-color: var(--main-color);
+    --dark-to-main-color: var(--bg-dark);
+    --shadow-black-100: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-black-300: 0 5px 15px rgba(0,0,0,0.3);
+    --black-900: #000;
+    --black-400: #555;
+    --black-100: #f7f7f7;
+    --black-000: #fff;
+    --black-alpha-100: rgba(0,0,0,0.05);
+}
+
+body {
+    font-family: "B612", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    overflow-x: hidden;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    --black-100: var(--bg-dark);
+    --black-000: var(--bg-dark);
+    --main-to-dark-color: var(--bg-dark);
+    --dark-to-main-color: var(--main-color);
+    --shadow-black-100: var(--shadow-black-300);
+    --black-alpha-100: rgba(255,255,255,0.05);
+    --black-900: #fff;
+    --black-400: #bbb;
+}
