@@ -9,7 +9,7 @@
     --dark-to-main-color: var(--bg-dark);
     --shadow-black-100: 0 5px 15px rgba(0,0,0,0.1);
     --shadow-black-300: 0 5px 15px rgba(0,0,0,0.3);
-    --black-900: #000;
+    --black-900: #17171f;
     --black-400: #555;
     --black-000: #fff;
     --black-alpha-100: rgba(0,0,0,0.05);
@@ -39,10 +39,6 @@ body.dark-mode {
     --black-alpha-100: rgba(255,255,255,0.05);
     --black-900: #fff;
     --black-400: #bbb;
-}
-main {
-    display: felx;
-    justify-content: center;;
 }
 
 a {
@@ -254,6 +250,11 @@ section#projects {
 }
 
 .project-item{
+    width: 300px;
+    height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--black-000);
     padding: 30px;
     text-align: center;
@@ -276,3 +277,240 @@ section#projects {
     margin: 0 0 30px;
     line-height: 26px;
 }
+/*Contact List*/
+section#contact-info h2.section-title {
+    color: var(--black-900);
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 80px;
+    margin-top: 16px;
+}
+
+.contact-list-item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 32px;
+    align-items: baseline;
+}
+
+.contact-list-item a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+/*Footer*/
+@keyframes blink {
+    from {
+        left: 12px;
+        width: 13px;
+        height: 5px;
+        border-radius: 4px;
+        transition-timing-function: ease-in;
+    }
+
+    20% {
+        left: 14px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        transition-timing-function: ease-in;
+    }
+
+    30% {
+        left: 12px;
+        width: 13px;
+        height: 5px;
+        border-radius: 4px;
+        transition-timing-function: ease-in;
+    }
+
+    35% {
+        left: 14px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        transition-timing-function: ease-out;
+    }
+
+    40% {
+        left: 12px;
+        width: 13px;
+        height: 5px;
+        border-radius: 4px;
+        transition-timing-function: ease-out;
+    }
+
+    55% {
+        left: 14px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+    }
+
+    80% {
+        left: 14px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        transition-timing-function: ease-in;
+    }
+
+    from {
+        left: 12px;
+        width: 13px;
+        height: 5px;
+        border-radius: 4px;
+    }
+}
+@keyframes smile {
+    from {
+        height: 5px;
+        border-radius: 5px;
+    }
+
+    40% {
+        height: 5px;
+        border-radius: 5px;
+        transition-timing-function: ease-in-out;
+    }
+
+    60% {
+        height: 8px;
+        border-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transform: translateX(-50%);
+        transition-timing-function: ease-in-out;
+    }
+
+    80% {
+        height: 8px;
+        border-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transform: translateX(-50%);
+        transition-timing-function: ease-in-out;
+    }
+
+    to {
+        height: 5px;
+        border-radius: 5px;
+    }
+}
+
+footer {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    background-color: var(--bg);
+}
+
+footer .base {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+footer .base .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black-900);
+    border-radius: 50%;
+}
+footer .base .face::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 12px;
+    width: 13px;
+    height: 5px;
+    background: var(--black-000);
+    border-radius: 4px;
+    box-shadow: 35px 0 0 var(--black-000);
+    transition: 0.5s;
+    animation: blink 3s infinite; 
+}
+footer .base .face::after {
+    content: '';
+    position: absolute;
+    top: 46px;
+    left: 48.8%;
+    transform: translateX(-50%);
+    bottom: 45px;
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--black-000);
+    transition: 0.5s;
+    animation: smile 3s infinite;
+}
+
+/*Responsive*/
+@media (max-width: 1200px) {
+    section{
+        padding: 50px 100px;
+    }
+    section h2.section-title {
+        font-size: 35px;
+    }
+    
+    .project-items {
+        gap: 30px;
+    }
+    .project-item h3 {
+        font-size: 18px;
+    }
+    
+    .project-item p {
+        font-size: 10px;
+    }
+    
+    .btn {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 824px) {
+    .article > header {
+        width: 500px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .article p.about-me-text {
+        width: 500px;
+        font-size: 14px;
+    }
+
+    section{
+        padding: 50px 60px;
+    }
+    section h2.section-title {
+        font-size: 30px;
+    }
+    
+    .project-items {
+        gap: 20px;
+    }
+    .project-item h3 {
+        font-size: 16px;
+    }
+    
+    .project-item p {
+        font-size: 10px;
+    }
+    
+    .btn {
+        padding: 8px 25px;
+        font-size: 10px;
+    }
+}
+/*Falta responisvidad a partir de 744px **flex wrap para project-items en cel** y nav bar colapsable (solo si no rompe mi jerarquia de html)
+la navbar colapsable se maneja en js y css (creo, tengo que checar)*/

@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
     setTimeout(() => preloader.style.display = "none", 500);
 });
 
-// Theme Toggle
+//Theme Toggle
 function toggleTheme() {
     if (localStorage.getItem("theme") !== null) {
         if (localStorage.getItem("theme") === "dark") {
