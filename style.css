@@ -512,5 +512,66 @@ footer .base .face::after {
         font-size: 10px;
     }
 }
-/*Falta responisvidad a partir de 744px **flex wrap para project-items en cel** y nav bar colapsable (solo si no rompe mi jerarquia de html)
+
+@media (max-width: 744px) {
+    .article > header {
+        width: 400px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .article p.about-me-text {
+        width: 400px;
+        font-size: 12px;
+    }
+
+    section{
+        padding: 50px 120px;
+    }
+    .project-items {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+}
+
+@media (max-width: 560px) {
+    ul.contact-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    li.contact-list-item {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 440px) {
+    .article > header {
+        width: 200px;
+    }
+    h1 {
+        font-size: 15px;
+    }
+    .profile-info p {
+        font-size: 10px;
+    }
+    .article p.about-me-text {
+        width: 200px;
+        font-size: 10px;
+    }
+
+    section{
+        padding: 50px 80px;
+    }
+    
+    .project-item h3 {
+        font-size: 12px;
+    }
+    
+    .project-item p {
+        font-size: 8px;
+    }
+    
+}
+/*Falta nav bar colapsable (solo si no rompe mi jerarquia de html)
 la navbar colapsable se maneja en js y css (creo, tengo que checar)*/
